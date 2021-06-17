@@ -160,6 +160,10 @@ class dEllipse {
   }
 }
 
-function mousePresse() {
-  background(mouseX, mouseY);
+function mousePressed() {
+   background(0);
+  if (!song.isPlaying()) {
+    song.loop();
+    song.setVolume(0.05);
+  }
 }
