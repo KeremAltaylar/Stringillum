@@ -163,7 +163,7 @@ class dEllipse {
 function mousePressed() {
    background(0);
   if (!song.isPlaying()) {
-    song.loop();
+    song.play();
     song.setVolume(0.05);
      reverb.process(song, 100);
   }
