@@ -77,7 +77,7 @@ function setup() {
   }
  // song.loop();
   //song.setVolume(0.7);
-  reverb.process(song, 100);
+  //reverb.process(song, 100);
 }
 
 function draw() {
@@ -165,5 +165,6 @@ function mousePressed() {
   if (!song.isPlaying()) {
     song.loop();
     song.setVolume(0.05);
+     reverb.process(song, 100);
   }
 }
