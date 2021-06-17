@@ -75,8 +75,8 @@ function setup() {
       ellipses.push(f);
     }
   }
-  song.loop();
-  song.setVolume(0.7);
+ // song.loop();
+  //song.setVolume(0.7);
   reverb.process(song, 100);
 }
 
