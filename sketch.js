@@ -75,9 +75,10 @@ function setup() {
       ellipses.push(f);
     }
   }
- // song.loop();
-  //song.setVolume(0.7);
-  //reverb.process(song, 100);
+  userStartAudio();
+  song.loop();
+  song.setVolume(0.7);
+  reverb.process(song, 100);
 }
 
 function draw() {
@@ -163,8 +164,8 @@ class dEllipse {
 function mousePressed() {
    background(0);
  
-    song.loop();
-    song.setVolume(0.05);
-     reverb.process(song, 100);
+   // song.loop();
+   // song.setVolume(0.05);
+   //  reverb.process(song, 100);
   
 }
