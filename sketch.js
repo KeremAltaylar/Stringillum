@@ -76,8 +76,9 @@ function setup() {
     }
   }
   userStartAudio();
-  song.loop();
   song.setVolume(0.05);
+  song.loop();
+ // song.setVolume(0.05);
   reverb.process(song, 100);
 }
 
