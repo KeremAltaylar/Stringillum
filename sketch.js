@@ -4,8 +4,8 @@ let spacer;
 let buk;
 let ellipses = [];
 let colors = [];
-
 let reverb;
+
 function preload() {
   song = loadSound("Soundsc.mp3");
 }
@@ -162,9 +162,9 @@ class dEllipse {
 
 function mousePressed() {
    background(0);
-  if (!song.isPlaying()) {
-    song.play();
+ 
+    song.loop();
     song.setVolume(0.05);
      reverb.process(song, 100);
-  }
+  
 }
