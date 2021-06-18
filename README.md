@@ -1,6 +1,6 @@
 # * STRINGILLUM * 
 
-  Stringillum is an interactive kinetic painting with audio-reactivity. Fundamental design of the work is based on a custom object and its distribution on to  2-dimensional array structure. Aesthetically it aims to have sharp and gothic look which is provided by the curve arrays. The Usage of the such system creates a ligth efect which can be considered as an illusion. The motion design is layered into sub sections. 
+  Stringillum is an interactive kinetic painting with audio-reactivity. Mouse click starts the sound and clears the canvas; mouse location affects the sound.  Fundamental design of the work is based on a custom object and its distribution on to  2-dimensional array structure. Aesthetically it aims to have sharp and gothic look which is provided by the curve arrays. The Usage of the such system creates a ligth efect which can be considered as an illusion. The motion design is layered into sub sections. 
   
   * Curves in the array have dynamic height that they are randomly determined and are changing always
   * X,Y locations of the each individual angle of the curve are moving with the speed parameter.
