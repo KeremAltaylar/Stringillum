@@ -15,6 +15,8 @@ This work has also sound. 3 chord drone sample is recorded by me in Ableton. I u
   song.setVolume(0.05);
   filter.process(song);
   reverb.process(song, 25);
+  let bandfreq = map(mouseX, 0, windowWidth, 0, 15000);
+  filter.freq(bandfreq);
   ```
 This is the object that I created.
 
