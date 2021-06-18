@@ -1,7 +1,22 @@
 # * STRINGILLUM * 
 
-Stringillum is an interactive kinetic painting with audio-reactivity. 
-Fundamental 
+  Stringillum is an interactive kinetic painting with audio-reactivity. Fundamental design of the work is based on a custom object and its distribution on to  2-dimensional array structure. Aesthetically it aims to have sharp and gothic look which is provided by the curve arrays. The Usage of the such system creates a ligth efect which can be considered as an illusion. The motion design is layered into sub sections. 
+  
+  * Curves in the array have dynamic height that they are randomly determined and are changing always
+  * X,Y locations of the each individual angle of the curve are moving with the speed parameter.
+  * One side of the each curve is connected in the middle, other sides are distributed towards the width and height
+  * Center of the curves are dynamically changing its location with _Mouse_
+
+This work has also sound. 3 chord drone sample is recorded by me in Ableton. I use the reverb class of the P5.sound Library with long tail.
+```javascript
+  reverb = new p5.Reverb();
+  userStartAudio();
+  song.loop();
+  song.setVolume(0.05);
+  filter.process(song);
+  reverb.process(song, 25);
+  ```
+This is the object that I created.
 
 ```javascript
 class dEllipse {
@@ -62,3 +77,36 @@ class dEllipse {
   }
 }
 ```
+This is the 2D Array structure that I hardcoded. (I could use the Javascript 2DArray instead but I wanted to establish it myself first.)
+```javascript
+for (let x = 0; x < windowWidth - 600; x += spacer) {
+    for (let y = 0; y < windowHeight - 10; y += spacer) {
+      let d = new dEllipse(
+        x,
+        y,
+        random(0, 40),
+        random(30, buk),
+        noise(1000, 500, 5000),
+        noise(10),
+        1,
+        255,
+        255
+      );
+      ellipses.push(d);
+      let f = new dEllipse(
+        x,
+        y,
+        random(0, 20),
+        random(1800),
+        random(0, 10),
+        random(0, 100),
+        1,
+        randomGaussian(0, 233),
+        255,
+        255
+      );
+      ellipses.push(f);
+    }
+  }
+```
+
