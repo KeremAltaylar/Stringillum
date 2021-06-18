@@ -7,7 +7,7 @@
   * One side of the each curve is connected in the middle, other sides are distributed towards the width and height
   * Center of the curves are dynamically changing its location with _Mouse_
 
-This work has also sound. 3 chord drone sample is recorded by me in Ableton. I use the reverb class of the P5.sound Library with long tail.
+This work has also sound. 3 chord drone sample is recorded by me in Ableton. I use the reverb class of the P5.sound Library with long tail. Also there is an interactive lowpass filter which is controlled my the mouse location.
 ```javascript
   reverb = new p5.Reverb();
   userStartAudio();
@@ -18,7 +18,7 @@ This work has also sound. 3 chord drone sample is recorded by me in Ableton. I u
   let bandfreq = map(mouseX, 0, windowWidth, 0, 15000);
   filter.freq(bandfreq);
   ```
-This is the object that I created.
+This is the object that I created. It is spesifically designed for huge amounts which are controlled by "for" loops.
 
 ```javascript
 class dEllipse {
@@ -109,6 +109,13 @@ for (let x = 0; x < windowWidth - 600; x += spacer) {
       );
       ellipses.push(f);
     }
+  }
+  
+  for (i = 0; i < ellipses.length; i++) {
+    ellipses[i].move();
+    ellipses[i].bounces();
+    ellipses[i].display();
+    ellipses[i].update();
   }
 ```
 
