@@ -1,4 +1,3 @@
-# * Kerem Altaylar Portfolio * 
 
 # [Stringillum](https://keremaltaylar.github.io/Stringillum/) 
   
